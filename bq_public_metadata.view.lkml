@@ -37,14 +37,7 @@ view: bq_public_metadata {
     required_fields: [project_id,dataset_id]
     link: {
       label: "Explore"
-      url: "{%
-        if project_id._value == 'bigquery-public-data'
-        %}/connections/lookerdata_publicdata_standard_sql/explore/{{dataset_id._value}}/{{value}}{%
-        elsif project_id._value == 'lookerdata'
-        %}/connections/lookerdata/explore/{{dataset_id._value}}/{{value}}{%
-        else
-        %}/sql{% endif
-        %}"
+      url: "/connections/lookerdata/explore/{{project_id}}:{{dataset_id._value}}/{{value}}"
     }
   }
 
