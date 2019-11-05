@@ -14,9 +14,9 @@ view: profitloss_data {
   dimension_group: period_end_date {
     type: time
   }
-  measure: profit_loss_value {
+  measure: profit_loss_value_in_thousands {
     type: sum
-    sql: ${TABLE}.value ;;
+    sql: ${TABLE}.value/1000 ;;
     value_format:"$#.00;($#.00)"
   }
 }
@@ -39,10 +39,10 @@ view:  revenue_data{
     type: time
     hidden: yes
   }
-  measure: revenue_value {
+  measure: revenue_value_in_thousands {
     type: sum
     view_label: "SEC Data"
-    sql: ${TABLE}.value ;;
+    sql: ${TABLE}.value/1000 ;;
     value_format:"$#.00;($#.00)"
   }
 }
