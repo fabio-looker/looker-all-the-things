@@ -11,10 +11,6 @@ view: profitloss_data {
   dimension: company_name {
     type: string
     sql: ${TABLE}.company_name;;
-    link: {
-      label: "Dashboard"
-      url: "https://hack.looker.com/embed/dashboards/69?Company={{ value }}"
-    }
   }
 
   dimension_group: period_end_date {
