@@ -70,7 +70,7 @@ view: earnings_per_share {
     type: sum
     view_label: "SEC Data"
     sql: ${TABLE}.value ;;
-    value_format:"[>=1000000]$#,##0.00,\"M\";[<=-1000000]$#,##0.00,\"M\";$0.00\"K\""
+    value_format:"[>=1000000]$#,##0.00,,\"M\";[<=-1000000]$#,##0.00,,\"M\";$0.00,\"K\""
   }
 }
 
@@ -95,6 +95,6 @@ view: dividends {
     type: sum
     view_label: "SEC Data"
     sql: ${TABLE}.value ;;
-    value_format:"[>=1000000]$#,##0.00,\"M\";[<=-1000000]$#,##0.00,\"M\";$0.00\"K\""
+    value_format:"[>=1000000]$#,##0.00,,\"M\";[<=-1000000]$#,##0.00,,\"M\";$0.00,\"K\""
   }
 }
