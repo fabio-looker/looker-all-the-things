@@ -24,7 +24,7 @@ view: profitloss_data {
     type: sum
     sql: ${TABLE}.value ;;
     value_format:"[>=1000000]$#,##0.00,\"M\";[<=-1000000]$#,##0.00,\"M\";$0.00\"K\""
-    }
+  }
 }
 
 view:  revenue_data{
@@ -36,7 +36,7 @@ view:  revenue_data{
         and form like '%10-K%'
         and number_of_quarters= 4
         GROUP BY 1, 2;;
-    }
+  }
   dimension: company_name {
     type: string
     hidden: yes
