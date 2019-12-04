@@ -44,8 +44,8 @@ view: repositories {
     }
   }
   measure: open_issues {type: sum sql: ${open_issues_count} ;;}
-  measure: stars       {type: sum sql: ${open_issues_count} ;;}
-  measure: watchers    {type: sum sql: ${open_issues_count} ;;}
+  measure: stars       {type: sum sql: ${stars_count} ;;}
+  measure: watches    {type: sum sql: ${watches_count} ;;}
   measure: any_has_code_of_conduct {type: yesno sql: LOGICAL_OR(${has_code_of_conduct});;}
 
   measure: licenses {type:list list_field: license}
