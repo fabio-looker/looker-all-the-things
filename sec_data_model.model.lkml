@@ -1,6 +1,6 @@
 connection: "lookerdata"
 
-include: "*.view.lkml"                       # include all views in this project
+include: "sec_data.view.lkml"                       # include all views in this project
 explore:  profitloss_data{
   join: revenue_data {
     relationship: one_to_one
