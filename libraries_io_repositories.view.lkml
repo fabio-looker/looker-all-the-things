@@ -26,7 +26,7 @@ view: repositories {
 
   dimension: open_issues_count {type: number hidden: yes}
   dimension: stars_count       {type: number hidden: yes}
-  dimension: watches_count     {type: number hidden: yes}
+  dimension: watchers_count     {type: number hidden: yes}
 
   dimension: license {}
   dimension: language {}
@@ -45,7 +45,7 @@ view: repositories {
   }
   measure: open_issues {type: sum sql: ${open_issues_count} ;;}
   measure: stars       {type: sum sql: ${stars_count} ;;}
-  measure: watches    {type: sum sql: ${watches_count} ;;}
+  measure: watchers    {type: sum sql: ${watchers_count} ;;}
   measure: any_has_code_of_conduct {type: yesno sql: LOGICAL_OR(${has_code_of_conduct});;}
 
   measure: licenses {type:list list_field: license}
